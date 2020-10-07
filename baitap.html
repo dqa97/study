@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1><i>Nhập điểm thành phần vào các ô</i></h1>
+<input type="number" placeholder="Vật Lý" id="vl">
+<input type="number" placeholder="Hóa Học" id="hh">
+<input type="number" placeholder="Sinh Học" id="sh">
+<br>
+<br>
+<input type="button" value="Tính điểm tổng" onclick="tdt()">
+<p id="bbc"> </p>
+<input type="button" value="Tính điểm trung bình" onclick="tdtb()">
+<p id="ccc"> </p>
+</body>
+
+
+<script>
+    let vl = document.getElementById("vl");
+    let hh = document.getElementById("hh");
+    let sh = document.getElementById("sh");
+    function tdt(){
+        let a = +vl.value;
+        let b = +hh.value;
+        let c = +sh.value;
+        let bbc = a + b + c ;
+        document.getElementById('bbc').innerHTML = bbc ;
+    }
+    function tdtb(){
+        let ccc = (Number(vl.value)+Number(hh.value)+Number(sh.value)) / 3 ;
+        document.getElementById('ccc').innerHTML = ccc ;
+    }
+
+</script>
+</html>
