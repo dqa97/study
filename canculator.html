@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<form>
+    <h1> Caculator </h1>
+    <input type="number" id="x">
+    <input type="number" id="y">
+    <br>
+    <input type="button" value="Addition(+)" onclick="add()">
+    <input type="button" value="Subtraction(-)" onclick="sub()">
+    <input type="button" value="Multiplication(x)" onclick="mul()">
+    <input type="button" value="Division(/)" onclick="div()">
+    <p id="result"></p>
+</form>
+<script>
+    let x = document.getElementById("x");
+    let y = document.getElementById("y");
+    function add() {
+        let a = +x.value;
+        let b = +y.value;
+        let cong = a + b ;
+        document.getElementById("result").innerHTML = cong ;
+    }
+    function sub() {
+        let a = +x.value;
+        let b = +y.value;
+        let tru = a - b;
+        document.getElementById("result").innerHTML = tru;
+    }
+    function mul() {
+        let a = +x.value;
+        let b = +y.value;
+        let nhan = a * b;
+        document.getElementById("result").innerHTML = nhan;
+    }
+    function div() {
+        let a = +x.value;
+        let b = +y.value;
+        let chia = a / b;
+        document.getElementById("result").innerHTML = chia;
+    }
+</script>
+</body>
+</html>

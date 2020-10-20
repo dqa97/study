@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p> Amount </p>
+    <input type="number" placeholder="Số tiền" id="stcd">
+    <p> From Currenly </p>
+    <select name="From Currency" id="fc">
+        <option value="1" id="jpy"> Japan Yen (JPY)</option>
+        <option value="218,84" id="vnd"> Viet Nam Dong (VND)</option>
+        <option value="0.0094" id="usd"> US Dollar (USD)</option>
+        <option value="10.94" id="krw"> Korean Won (KRW(</option>
+        <option value="0.0080" id="eur"> EURO</option>
+    </select>
+    <p> To Currenly </p>
+    <select name="To Currenly" id="tc">
+        <option value="1" id="jpy1"> Japan Yen (JPY)</option>
+        <option value="218,84" id="vnd1"> Viet Nam Dong (VND)</option>
+        <option value="0.0094" id="usd1"> US Dollar (USD)</option>
+        <option value="10.94" id="krw1"> Korean Won (KRW)</option>
+        <option value="0.0080" id="eur1"> EURO</option>
+    </select>
+    <br>
+    <br>
+    <input type="button" value="Convert" onclick="cove()">
+    <p id="result"> result : </p>
+
+<script>
+    let stcd = document.getElementById("stcd");
+    let fc = document.getElementById("fc");
+    let tc = document.getElementById("tc");
+    let jp = document.getElementById("jpy1");
+    let d = document.getElementById("vnd1");
+    let us = document.getElementById("usd1");
+    let w = document.getElementById("krw1");
+    let eu = document.getElementById("eur1");
+    function cove() {
+        let a = +stcd.value;
+        let b = +fc.value;
+        let c = +tc.value;
+        let kq = a * c / b;
+        document.getElementById('result').innerHTML = kq;
+    }
+</script>
+</body>
+</html>
